@@ -4,7 +4,7 @@ I have a designated my portfolio with [Figma]("https://figma.com") ♥ and imple
 
 ## The design
 
-![Gif do design no figma](https://firebasestorage.googleapis.com/v0/b/portfolio-4762e.appspot.com/o/figma-view_1.gif?alt=media&token=a1449423-d657-4594-bfb3-11c5f54676bb "Gif do design no figma")
+![Gif do design no figma](https://res.cloudinary.com/leandro-medeiros/image/upload/v1590588910/ezgif.com-resize_penn3u.gif "Gif do design no figma")
 
 ## Links
 
