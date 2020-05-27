@@ -30,3 +30,11 @@ I have a designated my portfolio with [Figma]("https://figma.com") ♥ and imple
 
 - Blog detail
   - Have a content of the post, this pages is dinamically.
+
+## Template
+
+I have a maked the template, feel free to inspire with it.
+
+You find the template here -> [\õ/](https://www.figma.com/file/ezu4hURvvJ511Wh6a77Ohn/Portf%C3%B3lio-Leandro-Medeiros?node-id=0%3A1)
+
+- notes: I sometimes update the layout
