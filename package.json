@@ -15,6 +15,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1",
+    "styled-map": "^3.3.0",
     "typescript": "^3.9.3"
   },
   "scripts": {
