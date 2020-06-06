@@ -1,6 +1,6 @@
 ﻿import "styled-components";
 import { DefaultTheme } from "styled-components";
-import { rem } from "polished";
+import { rem, rgba } from "polished";
 
 declare module "styled-components" {
   export interface DefaultTheme {
@@ -11,7 +11,7 @@ declare module "styled-components" {
 }
 
 export const colors = {
-  primary: "2B2B2B",
+  primary: "#2B2B2B",
   secondary: "#747474",
 };
 
@@ -43,6 +43,11 @@ export const fontTypes = {
     letterSpacing: rem("2.08px"),
     fontWeight: "bold",
     fontSize: rem("15px"),
+  },
+  menuLink: {
+    fontFamily,
+    color: rgba("#fff", 0.8),
+    fontSize: rem("30px"),
   },
 };
 

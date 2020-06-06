@@ -8,4 +8,8 @@ const Text: FunctionComponent<Props> = ({ type, children, ...rest }) => (
   </Container>
 );
 
+Text.defaultProps = {
+  type: "body",
+} as Partial<Props>;
+
 export default Text;
