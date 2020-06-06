@@ -1,5 +1,6 @@
 ﻿import "styled-components";
 import { DefaultTheme } from "styled-components";
+import { rem } from "polished";
 
 declare module "styled-components" {
   export interface DefaultTheme {
@@ -24,18 +25,24 @@ export const fontTypes = {
     fontWeight: 700,
     lineHeight: "19px",
   },
+  subtitle: {
+    fontFamily: "'Lora', serif",
+    fontSize: rem("20.96px"),
+    lineHeight: "185%",
+  },
   body: {
     fontFamily,
-    fontSize: 15,
-    letterSpacing: "0.08em",
-    lineHeight: "35px",
+    fontSize: rem("12.96px"),
+    letterSpacing: rem("2.08px"),
+    lineHeight: "150.9%",
   },
   logo: {
     fontFamily,
     color: "#000",
     textTransform: "uppercase",
-    letterSpacing: "0.13em",
+    letterSpacing: rem("2.08px"),
     fontWeight: "bold",
+    fontSize: rem("15px"),
   },
 };
 

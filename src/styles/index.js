@@ -1,8 +1,6 @@
 ﻿import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@400;700&display=swap');
-
   * {
     padding: 0;
     margin: 0;
