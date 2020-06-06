@@ -1,5 +1,4 @@
 ﻿import React from "react";
-import { Link } from "react-router-dom";
 
 import { Header } from "./components";
 
@@ -9,7 +8,6 @@ const home = () => {
   return (
     <Container>
       <Header />
-      this is a home page as <Link to="/blog">blog page</Link>
     </Container>
   );
 };
