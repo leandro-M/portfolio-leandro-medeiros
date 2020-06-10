@@ -6,8 +6,12 @@ import { colors, fontTypes } from "styles/theme";
 export interface Props {
   color?: keyof typeof colors;
   type?: keyof typeof fontTypes;
+  uppercase?: boolean;
+  onClick?: any;
 }
 
 export const Container = styled.p<Props>`
   ${theme("fontTypes", "type")};
+  color: ${theme("colors", "color")};
+  text-transform: ${({ uppercase }) => (uppercase ? "uppercase" : "none")};
 `;

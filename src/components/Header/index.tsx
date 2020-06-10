@@ -1,8 +1,8 @@
 ﻿import React from "react";
 
-import { Container, Right, Left } from "./styles";
-
 import { Text } from "components";
+
+import { Container, Right } from "./styles";
 
 const Header: React.FC = () => {
   return (
@@ -10,7 +10,6 @@ const Header: React.FC = () => {
       <Right>
         <Text type="logo">Leandro Medeiros</Text>
       </Right>
-      <Left></Left>
     </Container>
   );
 };

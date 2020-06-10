@@ -7,15 +7,12 @@ import GlobalStyle from "styles";
 
 import theme from "styles/theme";
 
-import { Header } from "components";
-
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header />
       <Router />
     </ThemeProvider>
   </React.StrictMode>,
