@@ -1,13 +1,9 @@
 ﻿import React from "react";
 
-import { Container } from "./styles";
+import { Container, Props } from "./styles";
 
-interface Props {
-  children?: React.Component;
-}
-
-const Grid: React.FC<Props> = ({ children }) => {
-  return <Container>{children}</Container>;
+const Grid: React.FC<Props> = ({ width, children }) => {
+  return <Container width={width}>{children}</Container>;
 };
 
 export default Grid;

@@ -1,6 +1,10 @@
 ﻿import styled from "styled-components";
 
-export const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
+export interface Props {
+  width?: string;
+}
+
+export const Container = styled.div<Props>`
+  max-width: ${({ width }) => width || "1200"}px;
+  margin: ${({ width }) => (width ? 0 : "0 auto")};
 `;
