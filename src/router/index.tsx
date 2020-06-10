@@ -1,7 +1,7 @@
 ﻿import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { Header } from "components";
+import { Header, Footer } from "components";
 
 import { routes } from "./routes";
 
@@ -15,6 +15,8 @@ const router: React.FC = () => {
           <Route {...item} />
         ))}
       </Switch>
+
+      <Footer />
     </BrowserRouter>
   );
 };

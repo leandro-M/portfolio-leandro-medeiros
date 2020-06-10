@@ -11,8 +11,7 @@ export interface Props {
 }
 
 export const Container = styled.p<Props>`
-  text-transform: ${({ uppercase }) => (uppercase ? "uppercase" : "none")};
-  color: ${theme("colors", "color")};
-
   ${theme("fontTypes", "type")};
+  color: ${theme("colors", "color")};
+  text-transform: ${({ uppercase }) => (uppercase ? "uppercase" : "none")};
 `;

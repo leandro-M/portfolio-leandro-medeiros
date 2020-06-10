@@ -10,6 +10,7 @@ const Text: FunctionComponent<Props> = ({ type, color, children, ...rest }) => (
 
 Text.defaultProps = {
   type: "body",
+  color: "primary",
 } as Partial<Props>;
 
 export default Text;
