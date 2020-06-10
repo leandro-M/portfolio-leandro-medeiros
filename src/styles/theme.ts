@@ -14,6 +14,7 @@ export const colors = {
   primary: "#2B2B2B",
   secondary: "#747474",
   terciary: "#9CD7F8",
+  black: "#000",
 };
 
 const fontFamily = "'Ubuntu', sans-serif";
@@ -55,6 +56,11 @@ export const fontTypes = {
     fontFamily: "'Lora', serif",
     fontSize: rem("17px"),
     lineHeight: "185%",
+  },
+  titleSection: {
+    fontFamily,
+    fontWeight: "bold",
+    fontSize: rem("47.34px"),
   },
 };
 
