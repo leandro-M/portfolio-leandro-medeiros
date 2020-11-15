@@ -11,10 +11,18 @@ export const Container = styled(Grid)`
 
 export const Right = styled.div`
   flex-basis: 50%;
+
+  ${({theme}) => theme.mediaQueries.sm} {
+    flex-basis: 100%;
+  }
 `;
 
 export const Left = styled.div`
   flex-basis: 50%;
+
+  ${({theme}) => theme.mediaQueries.sm} {
+    flex-basis: 100%;
+  }
 
   display: flex;
   justify-content: flex-end;
