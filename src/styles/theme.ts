@@ -7,6 +7,7 @@ declare module "styled-components" {
     colors: { [key in keyof typeof colors]: string };
     fontTypes: { [key in keyof typeof fontTypes]: any };
     fontFamily: string;
+    mediaQueries: { [key in keyof typeof mediaQueries]: string }
   }
 }
 
@@ -64,10 +65,15 @@ export const fontTypes = {
   },
 };
 
+const mediaQueries = {
+  sm: "@media screen and (max-width: 768px)",
+}
+
 const theme: DefaultTheme = {
   colors,
   fontTypes,
   fontFamily,
+  mediaQueries,
 };
 
 export default theme;
