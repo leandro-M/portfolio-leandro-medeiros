@@ -13,6 +13,10 @@ export const Container = styled.div<Props>`
   ${Text} {
     position: relative;
     z-index: 1;
+
+    ${({theme}) => theme.mediaQueries.sm} {
+      font-size: 25px;
+    }
   }
 
   :after {
@@ -25,5 +29,9 @@ export const Container = styled.div<Props>`
     right: -22px;
 
     background-color: ${({ theme }) => theme.colors.terciary};
+
+    ${({theme}) => theme.mediaQueries.sm} {
+      display: none;
+    }
   }
 `;

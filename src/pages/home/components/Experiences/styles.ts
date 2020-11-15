@@ -7,7 +7,7 @@ import { Container as TitleSection } from "components/TitleSection/styles";
 import { Container as Text } from "components/Text/styles";
 
 export const Container = styled.section`
-  margin-top: ${rem("85px")};
+  padding: ${rem("85px")} 0;
 
   background-image: url(${stacks});
   background-size: auto 100%;
@@ -15,7 +15,12 @@ export const Container = styled.section`
   background-position: right center;
   background-attachment: fixed;
 
-  margin-bottom: 80px;
+
+  ${({theme}) => theme.mediaQueries.sm} {
+    background: none;
+    padding: ${rem("55px")} 0;
+
+  }
 
   ${TitleSection} {
     margin-bottom: ${rem("50px")};
@@ -25,6 +30,10 @@ export const Container = styled.section`
 export const Item = styled.div`
   display: flex;
   align-items: flex-start;
+
+  ${({theme}) => theme.mediaQueries.sm} {
+    flex-direction: column;
+  }
 
   :not(:nth-last-child(1)) {
     margin-bottom: ${rem("80px")};
@@ -45,6 +54,14 @@ export const Position = styled(Text).attrs({
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  ${({theme}) => theme.mediaQueries.sm} {
+    font-size: ${rem("19px")};
+
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+  }
 `;
 
 export const Time = styled.span`
@@ -65,6 +82,10 @@ export const Time = styled.span`
     display: block;
     margin: 0 25px;
     background-color: ${({ theme }) => theme.colors.secondary};
+
+    ${({theme}) => theme.mediaQueries.sm} {
+      display: none;
+    }
   }
 `;
 
