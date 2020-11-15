@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
   return (
     <Container>
       <Grid>
-        <Text uppercase>Designated and coded by me.</Text>
+        <Text uppercase>Designed and coded by me.</Text>
         <Text uppercase color="secondary">
           developed with <RedFlag>♥</RedFlag>
         </Text>
