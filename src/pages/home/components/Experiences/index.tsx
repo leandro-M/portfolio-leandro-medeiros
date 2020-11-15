@@ -1,6 +1,8 @@
 ﻿import React from "react";
 
 import pixterLogo from "assets/images/pixter-logo.png";
+import fatecLogo from "assets/images/fatec-logo.png";
+import icloudsLogo from "assets/images/iclouds-logo.svg";
 
 import { Grid, TitleSection } from "components";
 
@@ -54,7 +56,7 @@ const Experiences: React.FC = () => {
           </Item>
 
           <Item>
-            <Image src="https://media-exp1.licdn.com/dms/image/C4E0BAQGoRTE5ZRnT0w/company-logo_100_100/0?e=1599696000&v=beta&t=OOfXESxcxB3mJ6u48HSzmk-N1mui9um8IwCLW4gt3uI" />
+            <Image src={fatecLogo} />
 
             <Content>
               <Position>
@@ -75,7 +77,7 @@ const Experiences: React.FC = () => {
           </Item>
 
           <Item>
-            <Image src="https://media-exp1.licdn.com/dms/image/C4D0BAQE5KjmgtTcOgw/company-logo_100_100/0?e=1599696000&v=beta&t=ViguXfeiseT_9bso4WgVjxAEeMDDJw5MWSFVKj0uLnM" />
+            <Image src={icloudsLogo} />
 
             <Content>
               <Position>
