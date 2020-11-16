@@ -13,7 +13,7 @@ export const Right = styled.div`
   flex-basis: 50%;
 
   ${({theme}) => theme.mediaQueries.sm} {
-    flex-basis: 100%;
+    display: none;
   }
 `;
 

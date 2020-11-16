@@ -7,20 +7,20 @@ import { Container, Links, Link, RedFlag } from "./styles";
 const Footer: React.FC = () => {
   const links = [
     {
-      id: "facebook",
-      url: "https://www.facebook.com/leandro.medeiros.9/",
-    },
-    {
-      id: "instagram",
-      url: "https://www.instagram.com/_leandro_m/",
-    },
-    {
       id: "linkedin",
       url: "https://www.linkedin.com/in/leandro-medeiros/",
     },
     {
       id: "github",
       url: "https://github.com/leandro-M",
+    },
+    {
+      id: "facebook",
+      url: "https://www.facebook.com/leandro.medeiros.9/",
+    },
+    {
+      id: "instagram",
+      url: "https://www.instagram.com/_leandro_m/",
     },
   ];
   return (
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 
         <Links>
           {links.map((item) => (
-            <Link key={item.id} href={item.url}>
+            <Link key={item.id} href={item.url} target="_blank">
               <Text uppercase color="secondary">
                 {item.id}
               </Text>

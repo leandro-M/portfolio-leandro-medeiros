@@ -55,6 +55,7 @@ export const Left = styled.div`
 
   ${({theme}) => theme.mediaQueries.sm} {
     max-width: inherit;
+    padding: 0 20px;
   }
 
   ${TextStyle} {
@@ -92,7 +93,8 @@ export const Right = styled.figure`
   margin-right: ${rem("70px")};
 
   ${({theme}) => theme.mediaQueries.sm} {
-    margin: 0 auto;
+    margin: 20px auto;
+    padding: 0 20px;
   }
 `;
 
