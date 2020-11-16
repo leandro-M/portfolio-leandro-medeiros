@@ -27,7 +27,7 @@
     "build:prod": "cross-env REACT_APP_ENV=production react-scripts build",
     "eject": "react-scripts eject",
     "predeploy": "cross-env REACT_APP_ENV=production npm-run-all build:prod",
-    "deploy": "cross-env REACT_APP_ENV=production && firebase deploy --only hosting --project=production"
+    "deploy": "cross-env REACT_APP_ENV=production && firebase deploy --only hosting"
   },
   "eslintConfig": {
     "extends": "react-app"
