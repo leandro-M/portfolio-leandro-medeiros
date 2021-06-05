@@ -14,6 +14,7 @@ export const Wrapper = styled.article<PropsWrapper>`
   background-image: url(${linesHeader});
   background-size: 100% auto;
   background-position: center;
+  position: relative;
 
   :before {
     content: '${({ content }) => content}';
