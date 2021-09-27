@@ -1,109 +1,163 @@
-﻿import styled from "styled-components";
-import { rem, rgba } from "polished";
+﻿import styled, { css, keyframes } from "styled-components";
 
 import { Container as TextStyle } from "components/Text/styles";
 import { Container as Grid } from "components/Grid/styles";
+import background from "assets/images/layer-bg.png";
+import me from "assets/images/layer-me.png";
 
-import linesHeader from "assets/images/lines-header.png";
+const upAndDown = keyframes`
+  0% {
+    transform: translateY(0);
+  }
 
-interface PropsWrapper {
-  content: string;
-}
+  50% {
+    transform: translateY(-10px);
 
-export const Wrapper = styled.article<PropsWrapper>`
-  background-image: url(${linesHeader});
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const Wrapper = styled.div`
   background-size: 100% auto;
   background-position: center;
+  background-image: url(${background});
   position: relative;
-
-  :before {
-    content: '${({ content }) => content}';
-    
-    ${({ theme }) => theme.fontTypes.presentationTitle};
-    
-    font-size: ${rem("380px")};
-    color: ${({ theme }) => rgba(theme.colors.terciary, 0.1)};
-
-    position: absolute;
-    bottom: -6%;
-    left: -10%;
-
-    ${({theme}) => theme.mediaQueries.sm} {
-      display: none;
-    }
-  }
+  min-height: 100vh;
+  overflow: hidden;
 `;
+
+export const Me = styled.img.attrs({
+  src: me
+})`
+  position: absolute;
+  height: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+`
+
+export const MyName = styled.div`
+  position: absolute;
+  top: 80px;
+  left: 0;
+`
 
 export const Container = styled(Grid)`
-  position: relative;
+  ${({ theme }) => css`
+    position: relative;
 
-  width: 100vw;
-  height: calc(100vh - 65px);
+    width: 100vw;
+    height: 100%;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    ${theme.mediaQueries.sm} {
+      flex-direction: column;
+      height: auto;
+    }
+  `}
+`;
+
+export const Center = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
+  width: 100%;
+  height: 90vh;
 
-  ${({theme}) => theme.mediaQueries.sm} {
-    flex-direction: column;
-    height: auto;
+  
+  ${TextStyle} {
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
   }
 `;
 
-export const Left = styled.div`
-  max-width: ${rem("560px")};
-
-  ${({theme}) => theme.mediaQueries.sm} {
-    max-width: inherit;
-    padding: 0 20px;
-  }
+export const Socials = styled.div`
+  transform: translateX(50%) translateY(-530%) rotate(90deg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 
   ${TextStyle} {
-    :first-of-type {
-      margin-bottom: ${rem("35px")};
-      margin-left: -15px;
-
-      ${({theme}) => theme.mediaQueries.sm} {
-        margin-top: 50px;
-        font-size: ${rem("100px")};
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      :after {
-        content: "";
-        width: ${rem("35px")};
-        height: ${rem("35px")};
-
-        border-radius: 100%;
-
-        display: inline-block;
-        background-color: ${({ theme }) => theme.colors.terciary};
-
-        ${({theme}) => theme.mediaQueries.sm} {
-          width: ${rem("15px")};
-          height: ${rem("15px")};
-        }
-      }
-    }
+    white-space: nowrap;
   }
-`;
+`
 
-export const Right = styled.figure`
-  margin-right: ${rem("70px")};
+export const Dash = styled.div`
+  ${({ theme }) => css`
+    width: 50px;
+    height: 2px;
+    background-color: ${theme.colors.terciary};
+  `}
+`
 
-  ${({theme}) => theme.mediaQueries.sm} {
-    margin: 20px auto;
-    padding: 0 20px;
+export const Anchor = styled.a`
+  ${({ theme }) => css`
+    padding: 5px;
+    border-radius: 100%;
+    width: 34px;
+    height: 34px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+    ${theme.waves};
+  `}
+`
+
+export const Icon = styled.img`
+  transform: rotate(-90deg);
+  position: relative;
+  z-index: 3;
+`
+
+export const Bottom = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    ${theme.waves};
+    animation: ${upAndDown} 1.5s linear infinite;
+  `}
+`
+export const ArrowDown = styled.img`
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 3;
+`
+
+export const Descriptions = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  gap: 80px;
+
+  ${TextStyle} {
+    line-height: 200%;
   }
-`;
-
-export const Image = styled.img`
-  max-height: 490px;
-
-  ${({theme}) => theme.mediaQueries.sm} {
-    max-width: 100%;
-  }
-
-`;
+`

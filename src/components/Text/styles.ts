@@ -10,7 +10,7 @@ export interface Props {
   onClick?: any;
 }
 
-export const Container = styled.p<Props>`
+export const Container = styled.span<Props>`
   ${theme("fontTypes", "type")};
   color: ${theme("colors", "color")};
   text-transform: ${({ uppercase }) => (uppercase ? "uppercase" : "none")};

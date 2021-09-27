@@ -20,6 +20,7 @@ export default createGlobalStyle`
   }
   body {
     scroll-behavior: smooth;
+    background-color: #111;
   }
 
   html, body {

@@ -4,7 +4,7 @@ import { Header, Experiences } from "./components";
 
 import { Container } from "./styles";
 
-const home = () => {
+const Home = () => {
   return (
     <Container>
       <Header />
@@ -13,10 +13,10 @@ const home = () => {
   );
 };
 
-home.router = {
+Home.router = {
   key: "home-page",
   path: "/",
   exact: true,
 };
 
-export default home;
+export default Home;

@@ -4,7 +4,6 @@ import { Container as Grid } from "components/Grid/styles";
 import { Container as Text } from "components/Text/styles";
 
 export const Container = styled.div`
-  background-color: #fbfbfb;
   padding: 30px 0;
 
   ${Grid} {
